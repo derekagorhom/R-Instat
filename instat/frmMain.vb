@@ -2408,4 +2408,7 @@ Public Class frmMain
         dlgPasteSpecial.ShowDialog()
     End Sub
 
+    Private Sub DiaogueFormToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DiaogueFormToolStripMenuItem.Click
+        dlgDialogueForm.ShowDialog()
+    End Sub
 End Class
