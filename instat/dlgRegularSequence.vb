@@ -67,7 +67,7 @@ Public Class dlgRegularSequence
         ucrInputInStepsOf.AddQuotesIfUnrecognised = False
         ucrInputInStepsOf.SetValidationTypeAsNumeric(dcmMin:=0, bIncludeMin:=False)
 
-        ucrNudRepeatValues.SetParameter(New RParameter("each", 1))
+        ucrNudRepeatValues.SetParameter(New RParameter(" ", 1))
         ucrNudRepeatValues.SetMinMax(1, Integer.MaxValue)
 
         ucrDateTimePickerFrom.SetParameter(New RParameter("from", 0))
