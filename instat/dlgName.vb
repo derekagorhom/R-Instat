@@ -236,6 +236,19 @@ Public Class dlgName
         TestOKEnabled()
     End Sub
 
+    Private Sub CheckChange(dctName As Dictionary(Of Integer, String), iCol As Integer)
+        For Each value In dctName.Values
+            If Not CheckNames(value, iCol) Then
+                MsgBox("The column name must not be a numeric or contains space or french accent or be a boolean e.g TRUE, FALSE, T, F.")
+                bCurrentCell = False
+                Exit For
+            Else
+                bCurrentCell = True
+            End If
+        Next
+        TestOKEnabled()
+    End Sub
+
     Private Function ValidateRVariable(strText As String, iCol As Integer) As String
         'TODO this need to be implemented in the appropriare ucrControl
         Dim strNewDataText As String = strText
