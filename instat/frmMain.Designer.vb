@@ -4068,7 +4068,6 @@ Partial Class frmMain
         '
         'mnuPrepareDataReshapeRandomSplit
         '
-        Me.mnuPrepareDataReshapeRandomSplit.Enabled = False
         Me.mnuPrepareDataReshapeRandomSplit.Name = "mnuPrepareDataReshapeRandomSplit"
         Me.mnuPrepareDataReshapeRandomSplit.Size = New System.Drawing.Size(197, 22)
         Me.mnuPrepareDataReshapeRandomSplit.Text = "Random Split..."
