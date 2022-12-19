@@ -260,6 +260,13 @@ Partial Class ucrCalculator
         Me.cmdCos = New System.Windows.Forms.Button()
         Me.cmdSqrt = New System.Windows.Forms.Button()
         Me.grpSummary = New System.Windows.Forms.GroupBox()
+        Me.ContextMenuStripSummary = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.BaseToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StatsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StatipToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.E1071ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RobustbaseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RasterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.grpFrequencies = New System.Windows.Forms.GroupBox()
         Me.cmdFreqQuantile = New System.Windows.Forms.Button()
         Me.cmdFreqPropn = New System.Windows.Forms.Button()
@@ -470,13 +477,7 @@ Partial Class ucrCalculator
         Me.cmdbegin = New System.Windows.Forms.Button()
         Me.cmdAny1 = New System.Windows.Forms.Button()
         Me.cmdStringRHelp = New System.Windows.Forms.Button()
-        Me.ContextMenuStripSummary = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.BaseToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StatsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StatipToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.E1071ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RobustbaseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RasterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.grpComplex = New System.Windows.Forms.GroupBox()
         Me.cmdSummaryRHelp = New instat.ucrSplitButton()
         Me.cmdIntegerRHelp = New instat.ucrSplitButton()
         Me.cmdTransformRHelp = New instat.ucrSplitButton()
@@ -485,6 +486,17 @@ Partial Class ucrCalculator
         Me.ucrInputCalOptions = New instat.ucrInputComboBox()
         Me.ucrSelectorForCalculations = New instat.ucrSelectorByDataFrameAddRemove()
         Me.ucrReceiverForCalculation = New instat.ucrReceiverExpression()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.Button10 = New System.Windows.Forms.Button()
+        Me.Button11 = New System.Windows.Forms.Button()
+        Me.Button12 = New System.Windows.Forms.Button()
         Me.grpBasic.SuspendLayout()
         Me.grpDates.SuspendLayout()
         Me.grpInteger.SuspendLayout()
@@ -494,6 +506,7 @@ Partial Class ucrCalculator
         Me.grpWakefield.SuspendLayout()
         Me.grpMaths.SuspendLayout()
         Me.grpSummary.SuspendLayout()
+        Me.ContextMenuStripSummary.SuspendLayout()
         Me.grpFrequencies.SuspendLayout()
         Me.grpProbabilty.SuspendLayout()
         Me.grpTransform.SuspendLayout()
@@ -503,7 +516,7 @@ Partial Class ucrCalculator
         Me.grpCircular.SuspendLayout()
         Me.grpModifier.SuspendLayout()
         Me.grpSymbols.SuspendLayout()
-        Me.ContextMenuStripSummary.SuspendLayout()
+        Me.grpComplex.SuspendLayout()
         Me.SuspendLayout()
         '
         'lblExpression
@@ -3042,6 +3055,7 @@ Partial Class ucrCalculator
         '
         'grpSummary
         '
+        Me.grpSummary.Controls.Add(Me.grpComplex)
         Me.grpSummary.Controls.Add(Me.cmdSummaryRHelp)
         Me.grpSummary.Controls.Add(Me.grpFrequencies)
         Me.grpSummary.Controls.Add(Me.cmdKurtosis)
@@ -3080,6 +3094,48 @@ Partial Class ucrCalculator
         Me.grpSummary.TabIndex = 185
         Me.grpSummary.TabStop = False
         Me.grpSummary.Text = "Summary"
+        '
+        'ContextMenuStripSummary
+        '
+        Me.ContextMenuStripSummary.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BaseToolStripMenuItem1, Me.StatsToolStripMenuItem, Me.StatipToolStripMenuItem, Me.E1071ToolStripMenuItem, Me.RobustbaseToolStripMenuItem, Me.RasterToolStripMenuItem})
+        Me.ContextMenuStripSummary.Name = "ContextMenuStripSummary"
+        Me.ContextMenuStripSummary.Size = New System.Drawing.Size(136, 136)
+        '
+        'BaseToolStripMenuItem1
+        '
+        Me.BaseToolStripMenuItem1.Name = "BaseToolStripMenuItem1"
+        Me.BaseToolStripMenuItem1.Size = New System.Drawing.Size(135, 22)
+        Me.BaseToolStripMenuItem1.Text = "Base"
+        '
+        'StatsToolStripMenuItem
+        '
+        Me.StatsToolStripMenuItem.Name = "StatsToolStripMenuItem"
+        Me.StatsToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
+        Me.StatsToolStripMenuItem.Text = "Stats"
+        '
+        'StatipToolStripMenuItem
+        '
+        Me.StatipToolStripMenuItem.Name = "StatipToolStripMenuItem"
+        Me.StatipToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
+        Me.StatipToolStripMenuItem.Text = "Statip"
+        '
+        'E1071ToolStripMenuItem
+        '
+        Me.E1071ToolStripMenuItem.Name = "E1071ToolStripMenuItem"
+        Me.E1071ToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
+        Me.E1071ToolStripMenuItem.Text = "e1071"
+        '
+        'RobustbaseToolStripMenuItem
+        '
+        Me.RobustbaseToolStripMenuItem.Name = "RobustbaseToolStripMenuItem"
+        Me.RobustbaseToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
+        Me.RobustbaseToolStripMenuItem.Text = "Robustbase"
+        '
+        'RasterToolStripMenuItem
+        '
+        Me.RasterToolStripMenuItem.Name = "RasterToolStripMenuItem"
+        Me.RasterToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
+        Me.RasterToolStripMenuItem.Text = "Raster"
         '
         'grpFrequencies
         '
@@ -5587,47 +5643,25 @@ Partial Class ucrCalculator
         Me.cmdStringRHelp.Text = "R Help"
         Me.cmdStringRHelp.UseVisualStyleBackColor = True
         '
-        'ContextMenuStripSummary
+        'grpComplex
         '
-        Me.ContextMenuStripSummary.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BaseToolStripMenuItem1, Me.StatsToolStripMenuItem, Me.StatipToolStripMenuItem, Me.E1071ToolStripMenuItem, Me.RobustbaseToolStripMenuItem, Me.RasterToolStripMenuItem})
-        Me.ContextMenuStripSummary.Name = "ContextMenuStripSummary"
-        Me.ContextMenuStripSummary.Size = New System.Drawing.Size(136, 136)
-        '
-        'BaseToolStripMenuItem1
-        '
-        Me.BaseToolStripMenuItem1.Name = "BaseToolStripMenuItem1"
-        Me.BaseToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
-        Me.BaseToolStripMenuItem1.Text = "Base"
-        '
-        'StatsToolStripMenuItem
-        '
-        Me.StatsToolStripMenuItem.Name = "StatsToolStripMenuItem"
-        Me.StatsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.StatsToolStripMenuItem.Text = "Stats"
-        '
-        'StatipToolStripMenuItem
-        '
-        Me.StatipToolStripMenuItem.Name = "StatipToolStripMenuItem"
-        Me.StatipToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.StatipToolStripMenuItem.Text = "Statip"
-        '
-        'E1071ToolStripMenuItem
-        '
-        Me.E1071ToolStripMenuItem.Name = "E1071ToolStripMenuItem"
-        Me.E1071ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.E1071ToolStripMenuItem.Text = "e1071"
-        '
-        'RobustbaseToolStripMenuItem
-        '
-        Me.RobustbaseToolStripMenuItem.Name = "RobustbaseToolStripMenuItem"
-        Me.RobustbaseToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.RobustbaseToolStripMenuItem.Text = "Robustbase"
-        '
-        'RasterToolStripMenuItem
-        '
-        Me.RasterToolStripMenuItem.Name = "RasterToolStripMenuItem"
-        Me.RasterToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.RasterToolStripMenuItem.Text = "Raster"
+        Me.grpComplex.Controls.Add(Me.Button12)
+        Me.grpComplex.Controls.Add(Me.Button2)
+        Me.grpComplex.Controls.Add(Me.Button3)
+        Me.grpComplex.Controls.Add(Me.Button4)
+        Me.grpComplex.Controls.Add(Me.Button5)
+        Me.grpComplex.Controls.Add(Me.Button6)
+        Me.grpComplex.Controls.Add(Me.Button7)
+        Me.grpComplex.Controls.Add(Me.Button8)
+        Me.grpComplex.Controls.Add(Me.Button9)
+        Me.grpComplex.Controls.Add(Me.Button10)
+        Me.grpComplex.Controls.Add(Me.Button11)
+        Me.grpComplex.Location = New System.Drawing.Point(5, 16)
+        Me.grpComplex.Name = "grpComplex"
+        Me.grpComplex.Size = New System.Drawing.Size(300, 176)
+        Me.grpComplex.TabIndex = 186
+        Me.grpComplex.TabStop = False
+        Me.grpComplex.Text = "Complex"
         '
         'cmdSummaryRHelp
         '
@@ -5721,6 +5755,136 @@ Partial Class ucrCalculator
         Me.ucrReceiverForCalculation.TabIndex = 120
         Me.ucrReceiverForCalculation.ucrSelector = Nothing
         '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Button2.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Button2.Location = New System.Drawing.Point(122, 49)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(61, 30)
+        Me.Button2.TabIndex = 192
+        Me.Button2.Text = "exp"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Button3.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Button3.Location = New System.Drawing.Point(238, 49)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(57, 30)
+        Me.Button3.TabIndex = 191
+        Me.Button3.Text = "round"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Button4.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Button4.Location = New System.Drawing.Point(182, 49)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(57, 30)
+        Me.Button4.TabIndex = 190
+        Me.Button4.Text = "log"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Button5.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Button5.Location = New System.Drawing.Point(65, 49)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(58, 30)
+        Me.Button5.TabIndex = 189
+        Me.Button5.Text = "sqrt"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Button6.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Button6.Location = New System.Drawing.Point(0, 49)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(65, 30)
+        Me.Button6.TabIndex = 188
+        Me.Button6.Text = "conjugate"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'Button7
+        '
+        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Button7.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Button7.Location = New System.Drawing.Point(238, 20)
+        Me.Button7.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(57, 30)
+        Me.Button7.TabIndex = 187
+        Me.Button7.Text = "arg"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'Button8
+        '
+        Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Button8.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Button8.Location = New System.Drawing.Point(182, 20)
+        Me.Button8.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(57, 30)
+        Me.Button8.TabIndex = 186
+        Me.Button8.Text = "mod"
+        Me.Button8.UseVisualStyleBackColor = True
+        '
+        'Button9
+        '
+        Me.Button9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Button9.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Button9.Location = New System.Drawing.Point(122, 20)
+        Me.Button9.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(61, 30)
+        Me.Button9.TabIndex = 185
+        Me.Button9.Text = "imaginary"
+        Me.Button9.UseVisualStyleBackColor = True
+        '
+        'Button10
+        '
+        Me.Button10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Button10.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Button10.Location = New System.Drawing.Point(65, 20)
+        Me.Button10.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(58, 30)
+        Me.Button10.TabIndex = 184
+        Me.Button10.Text = "real"
+        Me.Button10.UseVisualStyleBackColor = True
+        '
+        'Button11
+        '
+        Me.Button11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Button11.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Button11.Location = New System.Drawing.Point(0, 20)
+        Me.Button11.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(65, 30)
+        Me.Button11.TabIndex = 183
+        Me.Button11.Text = "complex"
+        Me.Button11.UseVisualStyleBackColor = True
+        '
+        'Button12
+        '
+        Me.Button12.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Button12.Location = New System.Drawing.Point(204, 87)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(75, 23)
+        Me.Button12.TabIndex = 198
+        Me.Button12.Text = "R Help"
+        Me.Button12.UseVisualStyleBackColor = True
+        '
         'ucrCalculator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
@@ -5763,6 +5927,7 @@ Partial Class ucrCalculator
         Me.grpMaths.ResumeLayout(False)
         Me.grpSummary.ResumeLayout(False)
         Me.grpSummary.PerformLayout()
+        Me.ContextMenuStripSummary.ResumeLayout(False)
         Me.grpFrequencies.ResumeLayout(False)
         Me.grpProbabilty.ResumeLayout(False)
         Me.grpTransform.ResumeLayout(False)
@@ -5773,7 +5938,7 @@ Partial Class ucrCalculator
         Me.grpCircular.ResumeLayout(False)
         Me.grpModifier.ResumeLayout(False)
         Me.grpSymbols.ResumeLayout(False)
-        Me.ContextMenuStripSummary.ResumeLayout(False)
+        Me.grpComplex.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -6228,4 +6393,16 @@ Partial Class ucrCalculator
     Friend WithEvents E1071ToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RobustbaseToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RasterToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents grpComplex As GroupBox
+    Friend WithEvents Button12 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button6 As Button
+    Friend WithEvents Button7 As Button
+    Friend WithEvents Button8 As Button
+    Friend WithEvents Button9 As Button
+    Friend WithEvents Button10 As Button
+    Friend WithEvents Button11 As Button
 End Class
