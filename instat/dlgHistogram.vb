@@ -231,8 +231,8 @@ Public Class dlgHistogram
         ucrFactorReceiver.SetRCode(clsRaesFunction, bReset)
         ucrVariablesAsFactorforHist.SetRCode(clsRaesFunction, bReset)
         ucrInputHistPositions.SetRCode(clsRgeomPlotFunction, bReset)
-        UcrChkReverse.SetRCode(clsForecatsReverseValue, bReset)
         If bReset Then
+            UcrChkReverse.SetRCode(clsForecatsReverseValue, bReset)
             ucrInputStats.SetRCode(clsHistAesFunction, bReset)
         End If
     End Sub
@@ -264,7 +264,7 @@ Public Class dlgHistogram
                 clsRgeomPlotFunction.SetRCommand("geom_histogram")
             End If
             ucrFactorReceiver.ChangeParameterName("fill")
-            If ucrChkReverse.Checked Then
+            If UcrChkReverse.Checked Then
                 clsForecatsReverseValue.AddParameter("f", ucrFactorReceiver.GetVariableNames(False), iPosition:=0)
                 clsRaesFunction.AddParameter("fill", clsRFunctionParameter:=clsForecatsReverseValue, iPosition:=1)
             End If
@@ -444,11 +444,12 @@ Public Class dlgHistogram
         End If
     End Sub
 
-    Private Sub CoreControls_ControlContentsChanged() Handles ucrVariablesAsFactorforHist.ControlContentsChanged, ucrSaveHist.ControlContentsChanged, ucrFactorReceiver.ControlContentsChanged, ucrChkRidges.ControlContentsChanged, UcrChkReverse.ControlValueChanged
+    Private Sub CoreControls_ControlContentsChanged() Handles ucrVariablesAsFactorforHist.ControlContentsChanged, ucrSaveHist.ControlContentsChanged, ucrFactorReceiver.ControlContentsChanged, ucrChkRidges.ControlContentsChanged, UcrChkReverse.ControlContentsChanged
         TestOkEnabled()
     End Sub
 
     Private Sub ucrPnlOptions_Control(ucrChangedControl As ucrCore) Handles ucrVariablesAsFactorforHist.ControlValueChanged, ucrPnlOptions.ControlValueChanged, ucrFactorReceiver.ControlValueChanged, ucrChkRidges.ControlValueChanged, ucrChkDisplayAsDotPlot.ControlValueChanged, UcrChkReverse.ControlValueChanged
-
+        SetDialogOptions()
     End Sub
+
 End Class
