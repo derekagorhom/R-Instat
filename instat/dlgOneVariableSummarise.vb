@@ -31,10 +31,6 @@ Public Class dlgOneVariableSummarise
         clsConcFunction, clsSummaryTableFunction, clsDummyFunction,
         clsSkimrFunction, clsPivotWiderFunction As New RFunction
 
-    Private clsTableTitleFunction, clsTabFootnoteTitleFunction, clsTableSourcenoteFunction, clsFootnoteTitleLocationFunction,
-        clsFootnoteSubtitleLocationFunction, clsTabFootnoteSubtitleFunction, clsFootnoteCellFunction, clsFootnoteCellBodyFunction,
-            clsSecondFootnoteCellFunction, clsSecondFootnoteCellBodyFunction, clsTabStyleFunction, clsTabStyleCellTextFunction,
-            clsTabStylePxFunction, clsTabStyleCellTitleFunction, clsThemesTabOptionsFunction, clsgtExtraThemesFunction As New RFunction
     Private clsPipeOperator, clsJoiningPipeOperator As New ROperator
     Private clsSummaryOperator As New ROperator
     Private bResetSubdialog As Boolean = False
@@ -136,81 +132,10 @@ Public Class dlgOneVariableSummarise
         clsSummaryOperator = New ROperator
         clsPivotWiderFunction = New RFunction
 
-        clsTableTitleFunction = New RFunction
-        clsTabFootnoteTitleFunction = New RFunction
-        clsTableSourcenoteFunction = New RFunction
-        clsFootnoteTitleLocationFunction = New RFunction
-        clsFootnoteSubtitleLocationFunction = New RFunction
-        clsPipeOperator = New ROperator
-        clsTabFootnoteSubtitleFunction = New RFunction
-        clsFootnoteCellBodyFunction = New RFunction
-        clsSecondFootnoteCellBodyFunction = New RFunction
-        clsFootnoteCellFunction = New RFunction
-        clsSecondFootnoteCellFunction = New RFunction
-        clsTabStyleFunction = New RFunction
-        clsTabStyleCellTextFunction = New RFunction
-        clsTabStylePxFunction = New RFunction
-        clsTabStyleCellTitleFunction = New RFunction
-        clsJoiningPipeOperator = New ROperator
-        clsThemesTabOptionsFunction = New RFunction
-        clsgtExtraThemesFunction = New RFunction
-
         ucrSelectorOneVarSummarise.Reset()
 
         clsPipeOperator.SetOperation("%>%")
         clsPipeOperator.bBrackets = False
-
-        clsThemesTabOptionsFunction.SetPackageName("gt")
-        clsThemesTabOptionsFunction.SetRCommand("tab_options")
-
-        clsgtExtraThemesFunction.SetPackageName("gtExtras")
-
-        clsTabStyleFunction.SetRCommand("tab_style")
-        clsTabStyleFunction.SetPackageName("gt")
-        clsTabStyleFunction.AddParameter("style", clsRFunctionParameter:=clsTabStyleCellTextFunction, iPosition:=0)
-        clsTabStyleFunction.AddParameter("location", clsRFunctionParameter:=clsTabStyleCellTitleFunction, iPosition:=1)
-
-        clsTabStyleCellTitleFunction.SetPackageName("gt")
-        clsTabStyleCellTitleFunction.SetRCommand("cells_title")
-        clsTabStyleCellTitleFunction.AddParameter("groups", Chr(34) & "title" & Chr(34), iPosition:=0)
-
-        clsTabStyleCellTextFunction.SetPackageName("gt")
-        clsTabStyleCellTextFunction.SetRCommand("cell_text")
-        clsTabStyleCellTextFunction.AddParameter("size", clsRFunctionParameter:=clsTabStylePxFunction, iPosition:=0)
-
-        clsTabStylePxFunction.SetPackageName("gt")
-        clsTabStylePxFunction.SetRCommand("px")
-        clsTabStylePxFunction.AddParameter("size", "18", bIncludeArgumentName:=False, iPosition:=0)
-
-        clsTableTitleFunction.SetPackageName("gt")
-        clsTableTitleFunction.SetRCommand("tab_header")
-
-        clsTabFootnoteTitleFunction.SetPackageName("gt")
-        clsTabFootnoteTitleFunction.SetRCommand("tab_footnote")
-
-        clsTabFootnoteSubtitleFunction.SetPackageName("gt")
-        clsTabFootnoteSubtitleFunction.SetRCommand("tab_footnote")
-
-        clsFootnoteCellFunction.SetPackageName("gt")
-        clsFootnoteCellFunction.SetRCommand("tab_footnote")
-
-        clsSecondFootnoteCellFunction.SetPackageName("gt")
-        clsSecondFootnoteCellFunction.SetRCommand("tab_footnote")
-
-        clsFootnoteTitleLocationFunction.SetPackageName("gt")
-        clsFootnoteTitleLocationFunction.SetRCommand("cells_title")
-
-        clsFootnoteSubtitleLocationFunction.SetPackageName("gt")
-        clsFootnoteSubtitleLocationFunction.SetRCommand("cells_title")
-
-        clsTableSourcenoteFunction.SetPackageName("gt")
-        clsTableSourcenoteFunction.SetRCommand("tab_source_note")
-
-        clsFootnoteCellBodyFunction.SetPackageName("gt")
-        clsFootnoteCellBodyFunction.SetRCommand("cells_body")
-
-        clsSecondFootnoteCellBodyFunction.SetPackageName("gt")
-        clsSecondFootnoteCellBodyFunction.SetRCommand("cells_body")
 
         clsSkimrFunction.SetPackageName("skimr")
         clsSkimrFunction.SetRCommand("skim_without_charts")
