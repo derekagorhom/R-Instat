@@ -324,7 +324,7 @@ Public Class dlgOneVariableSummarise
             ucrSaveSummary.SetCheckBoxText("Store Summary")
         End If
         cmdSummaries.Visible = rdoCustomised.Checked
-        cmdFormatTable.Visible = rdoCustomised.Checked
+        cmdTableOptions.Visible = rdoCustomised.Checked
     End Sub
 
     Private Sub FillListView()
@@ -357,7 +357,7 @@ Public Class dlgOneVariableSummarise
         Next
     End Sub
 
-    Private Sub cmdFormatTable_Click(sender As Object, e As EventArgs) Handles cmdFormatTable.Click
+    Private Sub cmdTableOptions_Click(sender As Object, e As EventArgs) Handles cmdTableOptions.Click
         sdgTableOptions.Setup(ucrSelectorOneVarSummarise.strCurrentDataFrame, clsSummaryOperator)
         sdgTableOptions.ShowDialog(Me)
         bResetFormatSubdialog = False
