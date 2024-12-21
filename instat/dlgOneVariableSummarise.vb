@@ -237,7 +237,7 @@ Public Class dlgOneVariableSummarise
 
         clsSummaryOperator.SetOperation("%>%")
         clsSummaryOperator.AddParameter("tableFun", clsRFunctionParameter:=clsSummaryTableFunction, iPosition:=0)
-        clsSummaryOperator.AddParameter("gttbl", clsRFunctionParameter:=clsGtFunction, iPosition:=2)
+        clsSummaryOperator.AddParameter(strParameterName:="gt_tbl", clsRFunctionParameter:=clsGtFunction, iPosition:=2, bIncludeArgumentName:=False)
 
         clsJoiningPipeOperator.SetOperation("%>%")
         clsJoiningPipeOperator.AddParameter("mutable", clsROperatorParameter:=clsSummaryOperator, iPosition:=0)
@@ -433,15 +433,8 @@ Public Class dlgOneVariableSummarise
     End Sub
 
     Private Sub cmdFormatTable_Click(sender As Object, e As EventArgs) Handles cmdFormatTable.Click
-        sdgFormatSummaryTables.SetRCode(clsNewTableTitleFunction:=clsTableTitleFunction, clsNewTabFootnoteTitleFunction:=clsTabFootnoteTitleFunction, clsNewTableSourcenoteFunction:=clsTableSourcenoteFunction, clsNewDummyFunction:=clsDummyFunction,
-                                     clsNewFootnoteCellFunction:=clsFootnoteCellFunction, clsNewSecondFootnoteCellBodyFunction:=clsSecondFootnoteCellBodyFunction,
-                                   clsNewPipeOperator:=clsPipeOperator, clsNewFootnoteTitleLocationFunction:=clsFootnoteTitleLocationFunction, clsNewFootnoteCellBodyFunction:=clsFootnoteCellBodyFunction,
-                                   clsNewFootnoteSubtitleLocationFunction:=clsFootnoteSubtitleLocationFunction, clsNewTabFootnoteSubtitleFunction:=clsTabFootnoteSubtitleFunction, clsNewJoiningOperator:=clsJoiningPipeOperator,
-                                   clsNewMutableOperator:=clsSummaryOperator, clsNewSecondFootnoteCellFunction:=clsSecondFootnoteCellFunction,
-                                   clsNewTabStyleCellTextFunction:=clsTabStyleCellTextFunction, clsNewTabStyleFunction:=clsTabStyleFunction, clsNewTabStylePxFunction:=clsTabStylePxFunction, clsNewThemesTabOptionFunction:=clsThemesTabOptionsFunction,
-                                   clsNewgtExtraThemesFunction:=clsgtExtraThemesFunction, bReset:=bResetFormatSubdialog)
-
-        sdgFormatSummaryTables.ShowDialog()
+        sdgTableOptions.Setup(ucrSelectorOneVarSummarise.strCurrentDataFrame, clsSummaryOperator)
+        sdgTableOptions.ShowDialog(Me)
         bResetFormatSubdialog = False
     End Sub
 
