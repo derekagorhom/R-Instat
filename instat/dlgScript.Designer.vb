@@ -94,6 +94,7 @@ Partial Class dlgScript
         Me.lblPreview = New System.Windows.Forms.Label()
         Me.txtScript = New System.Windows.Forms.TextBox()
         Me.ucrBase = New instat.ucrButtons()
+        Me.lblSaveText = New System.Windows.Forms.Label()
         Me.tbFeatures.SuspendLayout()
         Me.tbPageSaveData.SuspendLayout()
         Me.tbPageGetData.SuspendLayout()
@@ -115,6 +116,7 @@ Partial Class dlgScript
         '
         'tbPageSaveData
         '
+        Me.tbPageSaveData.Controls.Add(Me.lblSaveText)
         Me.tbPageSaveData.Controls.Add(Me.lblSaveColumn)
         Me.tbPageSaveData.Controls.Add(Me.lblSaveDataFrame)
         Me.tbPageSaveData.Controls.Add(Me.ucrInputDataframeColumn)
@@ -147,7 +149,7 @@ Partial Class dlgScript
         'lblSaveColumn
         '
         Me.lblSaveColumn.AutoSize = True
-        Me.lblSaveColumn.Location = New System.Drawing.Point(151, 62)
+        Me.lblSaveColumn.Location = New System.Drawing.Point(122, 62)
         Me.lblSaveColumn.Name = "lblSaveColumn"
         Me.lblSaveColumn.Size = New System.Drawing.Size(49, 13)
         Me.lblSaveColumn.TabIndex = 70
@@ -156,7 +158,7 @@ Partial Class dlgScript
         'lblSaveDataFrame
         '
         Me.lblSaveDataFrame.AutoSize = True
-        Me.lblSaveDataFrame.Location = New System.Drawing.Point(149, 89)
+        Me.lblSaveDataFrame.Location = New System.Drawing.Point(120, 89)
         Me.lblSaveDataFrame.Name = "lblSaveDataFrame"
         Me.lblSaveDataFrame.Size = New System.Drawing.Size(65, 13)
         Me.lblSaveDataFrame.TabIndex = 69
@@ -168,7 +170,7 @@ Partial Class dlgScript
         Me.ucrInputDataframeColumn.AutoSize = True
         Me.ucrInputDataframeColumn.IsMultiline = False
         Me.ucrInputDataframeColumn.IsReadOnly = False
-        Me.ucrInputDataframeColumn.Location = New System.Drawing.Point(215, 87)
+        Me.ucrInputDataframeColumn.Location = New System.Drawing.Point(186, 87)
         Me.ucrInputDataframeColumn.Margin = New System.Windows.Forms.Padding(9)
         Me.ucrInputDataframeColumn.Name = "ucrInputDataframeColumn"
         Me.ucrInputDataframeColumn.Size = New System.Drawing.Size(123, 21)
@@ -180,7 +182,7 @@ Partial Class dlgScript
         Me.ucrInputSaveColumn.AutoSize = True
         Me.ucrInputSaveColumn.IsMultiline = False
         Me.ucrInputSaveColumn.IsReadOnly = False
-        Me.ucrInputSaveColumn.Location = New System.Drawing.Point(215, 56)
+        Me.ucrInputSaveColumn.Location = New System.Drawing.Point(186, 56)
         Me.ucrInputSaveColumn.Margin = New System.Windows.Forms.Padding(9)
         Me.ucrInputSaveColumn.Name = "ucrInputSaveColumn"
         Me.ucrInputSaveColumn.Size = New System.Drawing.Size(123, 21)
@@ -976,6 +978,15 @@ Partial Class dlgScript
         Me.ucrBase.Size = New System.Drawing.Size(408, 52)
         Me.ucrBase.TabIndex = 16
         '
+        'lblSaveText
+        '
+        Me.lblSaveText.AutoSize = True
+        Me.lblSaveText.Location = New System.Drawing.Point(317, 62)
+        Me.lblSaveText.Name = "lblSaveText"
+        Me.lblSaveText.Size = New System.Drawing.Size(116, 13)
+        Me.lblSaveText.TabIndex = 71
+        Me.lblSaveText.Text = "(separated by commas)"
+        '
         'dlgScript
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
@@ -1078,4 +1089,5 @@ Partial Class dlgScript
     Friend WithEvents ucrInputDataframeColumn As ucrInputTextBox
     Friend WithEvents ucrInputSaveColumn As ucrInputTextBox
     Friend WithEvents rdoVariable As RadioButton
+    Friend WithEvents lblSaveText As Label
 End Class

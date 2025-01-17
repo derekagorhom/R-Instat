@@ -784,6 +784,7 @@ Public Class dlgScript
         ucrInputDataframeColumn.SetVisible(False)
         lblSaveColumn.Visible = False
         lblSaveDataFrame.Visible = False
+        lblSaveText.Visible = False
         If rdoDataFrame.Checked Then
             ucrInputSaveDataFrame.SetVisible(True)
             ucrChkSaveDataFrameSingle.SetVisible(True)
@@ -795,6 +796,7 @@ Public Class dlgScript
         ElseIf rdoVariable.Checked Then
             ucrInputSaveColumn.SetVisible(True)
             ucrInputDataframeColumn.SetVisible(True)
+            lblSaveText.Visible = True
             lblSaveColumn.Visible = True
             lblSaveDataFrame.Visible = True
             ucrChkSaveDataFrameSingle.SetVisible(True)
